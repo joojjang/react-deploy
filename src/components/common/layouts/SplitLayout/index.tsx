@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { HEADER_HEIGHT } from '@/components/features/Layout/Header';
+import { HEADER_HEIGHT } from '@/components/Layout/Header';
 import { breakpoints } from '@/styles/variants';
 
 import { Container } from '../Container';

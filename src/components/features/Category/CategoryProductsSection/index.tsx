@@ -20,26 +20,18 @@ export const CategoryProductsSection = ({ categoryId }: Props) => {
       categoryId,
     });
 
-  // console.log('products in this category: ', data);
-
   if (isLoading) return <LoadingView />;
   if (isError) return <TextView>에러가 발생했습니다.</TextView>;
   if (!data) return <></>;
   if (data.pages[0].products.length <= 0) return <TextView>상품이 없어요.</TextView>;
 
-  const flattenGoodsList = data.pages.map((page) => page?.products ?? []).flat();
+  const goodsList = data.pages.map((page) => page?.products ?? []).flat();
 
   return (
     <Wrapper>
       <Container>
-        <Grid
-          columns={{
-            initial: 2,
-            md: 4,
-          }}
-          gap={16}
-        >
-          {flattenGoodsList.map(({ productId, imageUrl, name, price }) => (
+        <Grid columns={{ initial: 2, md: 4 }} gap={16}>
+          {goodsList.map(({ productId, imageUrl, name, price }) => (
             <Link key={productId} to={getDynamicPath.productsDetail(productId)}>
               <DefaultGoodsItems
                 key={productId}

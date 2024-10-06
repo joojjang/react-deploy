@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { useGetWishes } from '@/api/hooks/wish/useGetWishes';
-import { HEADER_HEIGHT } from '@/components/features/Layout/Header';
+import { HEADER_HEIGHT } from '@/components/Layout/Header';
 import { useAuth } from '@/provider/Auth';
 import { breakpoints } from '@/styles/variants';
 

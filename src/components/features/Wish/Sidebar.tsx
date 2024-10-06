@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { HEADER_HEIGHT } from '../Layout/Header';
+import { HEADER_HEIGHT } from '../../Layout/Header';
 
 export const Sidebar = () => {
   return <Wrapper></Wrapper>;
